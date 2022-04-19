@@ -5,11 +5,9 @@ import re
 import datetime as dt
 
 def binMatFile(mat,glider):
-    # finding the variables as named by Bruce
-    variablefile = 'V:/Catherine/Glider/DataFiles/Glider Yo Columns.xlsx'
-    variables = pd.read_excel(variablefile,sheet_name='new',header=None,usecols=[4],squeeze=True)
-    variables = list(variables.drop(variables.index[0]))
-
+    # binning a GNATS glider mission by depth and longitude
+    # using the .mat file from mbd2matlab.m as a starting point
+    
     #finding the required variables based on their default names
     if re.search('h',glider):
         searchKeys = ['sci_ocr*','sci_bbfl2s*','m_present_time','x_corrected_lat','x_corrected_lon','x_measured_depth',

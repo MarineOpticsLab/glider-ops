@@ -1,3 +1,5 @@
+# Bins all the existing glider missions by longitude and depth
+
 import os
 import re
 import fnmatch
@@ -5,7 +7,7 @@ import scipy.io
 from binMatFile import binMatFile
 
 gliders = ['henry','grampus']
-parentDirs = ['V:/glider/'+g for g in gliders]
+parentDirs = ['V:/glider/'+g for g in gliders]  #update as needed!
 
 missionDirs = []
 for pdir in parentDirs:
@@ -20,7 +22,7 @@ for mf in missionDirs:
         glider = 'grampus'
 
     mfile = mf + 'matlabdata/mission'+mno+'.mat'
-    outfile = 'V:/Catherine/Glider/DataFiles/fullMissions/'+glider+'-mission'+mno+'.nc'
+    outfile = 'V:/Catherine/Glider/DataFiles/fullMissions/'+glider+'-mission'+mno+'.nc'  #update as needed!
     if not(os.path.isfile(outfile)):
         try:
             mat = scipy.io.loadmat(mfile)
