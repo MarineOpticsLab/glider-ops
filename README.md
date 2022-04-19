@@ -32,3 +32,7 @@ This directory contains two workflows:
 
 1. **01-ApplyDifferentQuenchingCorrections** applys six different quenching correction methods to all the glider data.
 2. **02-AddCorrectedDataToMissionFiles** corrects all the glider chlorophyll fluorescence data with the best performing correction method and adds it to the binned, dark-corrected, mission files.
+
+# Creating Secondary Glider Parameters
+
+The notebook `CalculatingGliderParams` provides a workflow for creating a host of secondary parameters from the measured glider data e.g. mixed layer depth, euphotic depth.
